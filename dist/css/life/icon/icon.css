@@ -1,0 +1,33 @@
+.icon-sprite, .icon-account-setting-blue, .icon-area-price-makeup-black, .icon-area-price-makeup-blue, .icon-record {
+  background-image: url('../../../images/life/icon-sc0f7b61fd4.png');
+  background-repeat: no-repeat;
+}
+
+.icon-account-setting-blue {
+  background-position: 0 0;
+  height: 16px;
+  width: 15px;
+}
+
+.icon-area-price-makeup-black {
+  background-position: 0 -16px;
+  height: 16px;
+  width: 16px;
+}
+
+.icon-area-price-makeup-blue {
+  background-position: 0 -32px;
+  height: 16px;
+  width: 16px;
+}
+
+.icon-record {
+  background-position: 0 -48px;
+  height: 122px;
+  width: 114px;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,135 @@
+<script id="tree" type="text/ractive">
+	<ul {{._isRoot?'class="ui_tree"':''}} intro-outro='slide:{"easing":"linear"}'>
+	    {{#getChildren(this)}}
+            <li>
+                <span class="{{getTriangleClass(this)}}" on-click="nodeClick"></span>
+                <a href="javascript:void(0);" on-click="labelClick">{{getLabel(this)}}</a>
+                {{#if showSubtree(this)}}
+                  {{>subTree}}
+                {{/if}}
+            </li>
+        {{/getChildren(this)}}
+	</ul>
+</script>
+<script id="pagination" type="text/ractive">
+	<div>{{>content}}</div>
+	{{#if !items.length && isShowNoData}}
+	    <div class="ui-no-data">
+            <i class="icon-sad"></i><br>
+            <div class="message">您好，未查询到相关数据</div>
+	    </div>
+	{{/if}}
+	<div class="ui_pagination">
+        <div class="page_size">
+            每页显示
+            <ul>
+                {{#pageSizeArray}}
+                <li {{pageSize==this?'class="selected"':''}} on-click="changePageSize">{{this}}</li>
+                {{/pageSizeArray}}
+            </ul>
+        </div>
+        <ul class="pagination">
+        </ul>
+        <div class="page_total">
+            至第<input type="text" class="go_input" value="{{{pageNo}}}">页,
+            <a href="javascript:void(0);" class="go_btn" on-click="goClick">Go</a>共<span>{{total}}</span>条记录
+        </div>
+	</div>
+</script>
+<script id="popup" type="text/ractive">
+    <div class="popup_container" style="{{show?'display:block':'display:none'}}">
+        <div class="popup_center" on-click="stopPropagation" style="height:{{height}};width:{{width}};">
+            <div class="popup_wrapper">
+                <div class="popup_close" title="关闭" on-click="close"></div>
+                <div class="popup_title"><span>{{title}}</span></div>
+                <div class="popup_content">{{>template}}</div>
+            <div>
+        </div>
+    </div>
+</script>
+<script id="autoComplete" type="text/ractive">
+    {{#if _show && items.length!=0}}
+    <ul style="left:{{_left}}px;top:{{_top}}px;width:{{_width}}px;" class="ui_auto_complete">
+    	{{#items}}
+            <li on-mousedown="select">
+                {{_getLabel(this)}}
+            </li>
+        {{/items}}
+    </ul>
+    {{/if}}
+</script>
+<script id="loading" type="text/ractive">
+    <div class="ui_loading_overlay">
+        <div class="ui_loading">
+            <i class="loading_img"></i>
+            <p>正在通讯中...</p>
+        </div>
+    </div>
+</script>
+<script id="window" type="text/ractive">
+    <div class="backdrop">
+        <div class="ui-popup">
+            <div class="ui-popup_center">
+                <div class="ui-popup_wrapper">
+                    <div class="ui-popup-title">
+                        <span id="title"></span><i class="icon-close"></i>
+                    </div>
+                    <div class="ui-popup-content">
+                        <div class="ui-popup-message-title">
+                            <i id="icon"></i>
+                            <span id="message_title"></span>
+                        </div>
+                        <div id="message" class="ui-popup-message"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="ui-popup-footer">
+                        <a href="javascript:void(0);" class="negative-btn" id="cancelButton">取消</a>
+                        <a href="javascript:void(0);" class="positive-btn" id="okButton">确认</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="multiSelect">
+    <ul on-mouseover="onOver()" on-mouseout="onOut()" style="left:{{_left}}px;top:{{_top}}px;width:{{_width}}px;" class="ui-multi-select {{_show?'show':'hide'}}">
+        {{#items}}
+            <li>
+                <input type="checkbox" checked="{{this._checked}}" id="{{getId(this)}}" value="{{getValue(this)}}">
+                <label for="{{getId(this)}}">{{getLabel(this)}}</label>
+            </li>
+        {{/items}}
+    </ul>
+</script>
+<script id="searchPanelA" type="text/ractive">
+    <div style="{{_show?'display:block':'display:none'}}" class="search-panel-a {{_class}}" 
+        on-mousedown="panelClick" on-mouseout="mouseout">
+        <i></i>
+        <ol class="ol">
+          <li><span class="slt">热门</span></li>
+        </ol>
+        <ul class="ul">
+            {{#items}}
+              <li><a href="javascript:void(0)" on-mousedown="select" valueField="{{getValue(this)}}">{{getLabel(this)}}</a></li>
+            {{/items}}
+        </ul>
+    </div>
+</script>
+<script id="searchPanelB" type="text/ractive">
+      <div style="{{_show?'display:block':'display:none'}}" class="search-panel-b {{_class}}" 
+            on-mousedown="panelClick" on-mouseout="mouseout">
+        <div class="panel-head">{{_queryParamValue}}</div>
+        <div class="panel-page-list"></div>
+      </div>
+</script>
+<script id="panelListTpl" type="text/ractive">
+  <div class="panel-list">
+      {{#items:index}}
+          {{#if index == 0}}
+              <a class="hover" href="javascript:void(0);" on-mousedown="select" valueField="{{getValue(this)}}">{{getLabel(this)}}</a>
+          {{else}}
+              <a href="javascript:void(0);" on-mousedown="select" valueField="{{getValue(this)}}">{{getLabel(this)}}</a>
+          {{/if}}
+      {{/items}}
+  </div>
+</script>

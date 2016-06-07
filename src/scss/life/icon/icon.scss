@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "compass/utilities/sprites";    // 加载compass sprites模块
+$icon-sprite-dimensions: true;    // 启用自动设置sprite尺寸，默认值为false
+
+@import "life/icon/*.png";                    // 导入share目录下所有png图片
+@include all-icon-sprites;                // 输出所有的雪碧图css
+
+
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+}
