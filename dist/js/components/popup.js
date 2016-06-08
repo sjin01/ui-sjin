@@ -1,7 +1,7 @@
 /**
  * Created by martin on 6/24/15.
  */
-define(['jquery','text!../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
+define(['jquery','text!../../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
     UI.Popup = UI.extend(UI,function(options){
         /**
          * 弹出框内容模板,jQuery选择器

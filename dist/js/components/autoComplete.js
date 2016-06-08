@@ -2,7 +2,7 @@
  * Created by martin on 15/6/26.
  * 自动完成组件
  */
-define(['jquery','text!../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
+define(['jquery','text!../../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
     UI.AutoComplete = UI.extend(UI,function(options){
         /**
          * jquery选择器或者jquery对象【输入框】

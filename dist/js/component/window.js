@@ -1,7 +1,7 @@
 /**
  * Created by martin on 15/10/27.
  */
-define(['jquery', 'text!../template/components.rac', 'ui', "css!../css/component/popup.css"], function($, template, UI) {
+define(['jquery', 'text!../../template/components.rac', 'ui', "css!../css/component/popup.css"], function($, template, UI) {
     UI.Window = UI.extend(UI, function(options) {
         /**
          * options可选类型:

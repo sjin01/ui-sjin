@@ -1,7 +1,7 @@
 /**
  * Created by martin on 15/6/8.
  */
-define(['jquery','text!../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
+define(['jquery','text!../../template/components.rac','ractive','ui'],function($,template,Ractive,UI){
     UI.Tree = UI.extend(UI,function(options){
     	/**
     	 * 支持事件:labelClick
