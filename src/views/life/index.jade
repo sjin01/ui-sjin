@@ -4,6 +4,10 @@ extends layout/life-layout
 // 根据模板变量设置 title
 block title
     title UI-sJin-Life
+
+block styles
+
+
 // 根据模板 填充内容
 block content
 
@@ -11,7 +15,25 @@ block content
     h1 this is UI-sJin index page ...
 
     // 测试雪碧图 正常显示
-    i.icon.icon-record
+    i.icon-life.icon-life-record
+
+    // 测试 bootstrap css
+    .row
+        .col-xs-12
+            table.table.table-bordered
+                thead
+                    tr
+                        th asd
+                        th asd1
+                tbody
+                    tr
+                        td asd
+                        td asd
+                    tr
+                        td
+                            i.glyphicon.glyphicon-heart
+                        td
+                            i.icon.icon-stethoscope
 
     // 测试 js正常引用
     script(type='text/javascript').

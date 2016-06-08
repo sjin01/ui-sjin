@@ -7,6 +7,8 @@
     <!--meta(name="renderer", content="webkit")-->
     <!--meta(name="viewport", content="width=device-width, user-scalable=no")-->
     <title>UI-sJin-Life</title>
+    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../../css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="../../css/life/icon/icon.css" rel="stylesheet" type="text/css">
     <script src="../../js/libs/require.js"></script>
     <script src="../../js/base.js"></script>
@@ -14,7 +16,30 @@
   <body>
     <!-- 测试jade-->
     <h1>this is UI-sJin index page ...</h1>
-    <!-- 测试雪碧图 正常显示--><i class="icon icon-record"></i>
+    <!-- 测试雪碧图 正常显示--><i class="icon-life icon-life-record"></i>
+    <!-- 测试 bootstrap css-->
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>asd</th>
+              <th>asd1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>asd</td>
+              <td>asd</td>
+            </tr>
+            <tr>
+              <td><i class="glyphicon glyphicon-heart"></i></td>
+              <td><i class="icon icon-stethoscope"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <!-- 测试 js正常引用-->
     <script type="text/javascript">
       require(['jquery', 'popup'], function ($, Popup) {

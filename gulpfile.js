@@ -18,7 +18,7 @@ var paths = {
     json: ['src/views/**/*.json'],
     template: ['src/template/**/*.rac'],
     image: ['src/images/**/*.{jpg,jpeg,png,gif}'],
-    font: ['src/fonts/**/*.{eot,svg,ttf,woff}']
+    font: ['src/fonts/**/*.{eot,svg,ttf,woff,woff2}']
 };
 
 /*var commonData = require('./src/base.json');
