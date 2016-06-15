@@ -1,0 +1,127 @@
+@charset "UTF-8";
+//站点基色/点击文字链接颜色/当鼠标点击及滑过的时候/列表文字链接颜色
+$sec-base-color: #ff3c3c !default;
+//辅色
+$sec-assit-color: #0196ff !default;
+//辅色 用于新增按钮
+$sec-secondary-color: #f39700 !default;
+//链接悬浮高亮
+$sec-hover-color: $sec-base-color !default;
+//橘黄色
+$sec-orange-color: #fa6833;
+//行悬浮颜色
+$sec-row-hover-color: #fff0ea !default;
+
+//当鼠标点击按钮时候按钮变深颜色
+$sec-btn-clk-red-color:#e41414;
+$sec-btn-clk-blue-color:#1378e1;
+
+//边框颜色
+$sec-border-color:#e7e7e7;
+$sec-middle-border-color:#A9A9A9;
+//深边框颜色
+$sec-darken-border-color:#4d4c4c;
+
+//灰色背景
+$sec-title-bg-color:#f7f7f7;
+
+//全黑色字体
+$sec-black-color:#000 !default;
+//正常文本色:顶部导航栏文字及列表标题和列表内容及标题文字
+$sec-font-color: #313131 !default;
+//浅黑色文字:网站中特别重要文字
+$sec-light-dark-color: #1b1b1b !default;
+//灰色文本字体：顶部文字内容及详情文字
+$sec-gray-font-color: #535353 !default;
+//浅灰色文本字体：详情辅助文字及底部详情文字及辅助说明文字
+$sec-light-gray-color: #898989 !default;
+
+//灰色边框线
+$sec-gray-border-color: darken(white,20%) !default;
+// 浅灰色边框线
+$sec-gray-border-color-light: #dbdbdb !default;
+//警告色边框
+$sec-warning-border: #fdc4b2 !default;
+
+//灰色背景
+$sec-gray-bg-color: #d8d8d8 !default;
+//深灰色背景
+$sec-dark-bg-color: #c2c3c4 !default;
+//浅灰色背景
+$sec-light-bg-color:#f5f5f5 !default;
+//浅黄色背景
+$sec-light-yellow-bg:#fffded !default;
+//警告色背景
+$sec-warning-bg: #fff0ea !default;
+//白色背景
+$sec-white-bg-color:#fff !default;
+//禁用背景色
+$sec-disabled-bg: $sec-light-bg-color !default;
+
+
+//警告色
+$sec-warning-color: #fc840e !default;
+//成功色
+$sec-success-color: #02d46a !default;
+
+
+$sec-even-row-color: #f7f8f8 !default;
+
+$sec-button-padding:.5em 1em;
+
+$sec-button-line-height:1.5em;
+
+$sec-button-height: 2*nth($sec-button-padding,1)+$sec-button-line-height;
+
+$sec-md-button-padding:.5em 2em;
+
+$sec-md-button-font-size:14px;
+
+$icon-spacing: 20px;
+/*精灵图中图标在横向的位置,0为左边,50%居中,100%为右边*/
+$icon-position: 50%;
+/*是否在生成的精灵样式中包含图标的宽高*/
+$icon-sprite-dimensions:true;
+
+$pagination-positive-color:$sec-base-color;
+$pagination-border-color:$sec-gray-border-color;
+$pagination-border-radius:0;
+
+$sec-normal-button-width:110px;
+
+$sec-line-height: 30px !default;
+
+$sec-input-height:$sec-line-height !default;
+
+$sec-input-line-height:$sec-input-height !default;;
+
+$sec-input-border-radius: 0 !default;
+
+$sec-input-padding: 5px !default;
+
+$ui-page-width:1200px;
+$ui-page-padding:0 ;
+//系统默认字体大小
+$ui-font-size:14px;
+$pagination-padding:10px 0;
+$pagination-font-size:12px;
+
+$sec-top-bar-padding:0 !default;
+
+$sec-sidebar-z-index:99 !default;
+
+$qo-box-margin-left:17%;
+$qo-box-width:848px;
+$qo-white-background: #fff;
+$qo-white-color: #fff;
+$qo-min-height: 100px;
+
+
+//tooltip
+$ui-tooltip-border-color:$sec-base-color !default;
+$ui-tooltip-bg-color:$sec-row-hover-color !default;
+$ui-tooltip-font-size:12px !default;
+$ui-tooltip-line-height: 20px !default;
+$ui-tooltip-color:$sec-base-color !default;
+$ui-tooltip-max-width:200px !default;
+$ui-tooltip-zindex: 100 !default;

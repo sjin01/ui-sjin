@@ -11,15 +11,32 @@ var gulp = require('gulp'),
     amdOptimize = require("amd-optimize"),
     browserSync = require('browser-sync').create();
 
-var paths = {
-    sass: ['src/scss/**/*.scss'],
-    js: ['src/js/**/*.js'],
-    view: ['src/views/**/*.jade', '!src/views/**/*-layout.jade'],
-    json: ['src/views/**/*.json'],
-    template: ['src/template/**/*.rac'],
-    image: ['src/images/**/*.{jpg,jpeg,png,gif}'],
-    font: ['src/fonts/**/*.{eot,svg,ttf,woff,woff2}']
-};
+/*var paths = {
+    sass: ['src/scss/!**!/!*.scss'],
+    js: ['src/js/!**!/!*.js'],
+    view: ['src/views/!**!/!*.jade', '!src/views/!**!/!*-layout.jade'],
+    json: ['src/views/!**!/!*.json'],
+    template: ['src/template/!**!/!*.rac'],
+    image: ['src/images/!**!/!*.{jpg,jpeg,png,gif}'],
+    font: ['src/fonts/!**!/!*.{eot,svg,ttf,woff,woff2}']
+};*/
+var srcPaths = {
+        sass: ['src/scss/**/*.scss'],
+        js:   ['src/js/**/*.js'],
+        view: ['src/views/**/*.jade', '!src/views/**/*-layout.jade'],
+        json: ['src/views/**/*.json'],
+        image:['src/images/**/*.{jpg,jpeg,png,gif}'],
+        font: ['src/fonts/**/*.{eot,svg,ttf,woff,woff2}'],
+        template: ['src/templates/**/*.rac']
+    },
+    distPaths = {
+        css: 'dist/css/',
+        js: 'dist/js/',
+        view: 'dist/html/',
+        image: 'dist/images/',
+        font: 'dist/fonts/',
+        template: 'dist/templates/'
+    };
 
 /*var commonData = require('./src/base.json');
 var jsonRoot = './src/views/';
@@ -29,7 +46,7 @@ var backstage = require(jsonRoot + 'backstage.json'),
     supply = require(jsonRoot + 'supply.json');*/
 // --- Basic Tasks ---
 gulp.task('compass', ['images'], function() {
-    return gulp.src(paths.sass)
+    return gulp.src(srcPaths.sass)
         .pipe(
             compass({
                 config_file: './config.rb',
@@ -39,15 +56,15 @@ gulp.task('compass', ['images'], function() {
                 gutil.log(e);
                 this.emit('end');
             }))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest(distPaths.css))
         .pipe(browserSync.stream({
             once: true
         }));
 });
 
 gulp.task('js', function() {
-    return gulp.src(paths.js)
-        .pipe(gulp.dest('dist/js/'))
+    return gulp.src(srcPaths.js)
+        .pipe(gulp.dest(distPaths.js))
         .pipe(amdOptimize('base', {
             baseUrl: 'src/js',
             configFile: "src/js/base.js"
@@ -57,12 +74,12 @@ gulp.task('js', function() {
         }))
         .pipe(concat('base.js'))
         //.pipe( uglify() )
-        .pipe(gulp.dest('dist/js/'))
+        .pipe(gulp.dest(distPaths.js))
         .pipe(browserSync.stream());
 });
 
 gulp.task('views', function() {
-    return gulp.src(paths.view, {
+    return gulp.src(srcPaths.view, {
             base: "src/views"
         })
         .pipe(data(function(file) {
@@ -88,27 +105,27 @@ gulp.task('views', function() {
             gutil.log(e);
             this.emit('end');
         }))
-        .pipe(gulp.dest('dist/html/'))
+        .pipe(gulp.dest(distPaths.view))
         .pipe(browserSync.stream({
             once: true
         }));
 });
 
 gulp.task('fonts', function() {
-    return gulp.src(paths.font)
-        .pipe(gulp.dest('dist/fonts/'))
+    return gulp.src(srcPaths.font)
+        .pipe(gulp.dest(distPaths.font))
         .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {
-    return gulp.src(paths.image)
-        .pipe(gulp.dest('dist/images/'))
+    return gulp.src(srcPaths.image)
+        .pipe(gulp.dest(distPaths.image))
         .pipe(browserSync.stream());
 });
 
 gulp.task('templates', function() {
-    return gulp.src(paths.template)
-        .pipe(gulp.dest('dist/template/'))
+    return gulp.src(srcPaths.template)
+        .pipe(gulp.dest(distPaths.template))
         .pipe(browserSync.stream());
 });
 
@@ -117,22 +134,14 @@ gulp.task('serve', ['js', 'compass', 'views', 'fonts', 'images', 'templates'], f
         server: "./dist",
         directory: true
     });
-
-    gulp.watch(paths.sass, ['compass']);
-
-    gulp.watch(paths.js, ['js']);
-
-    gulp.watch(paths.view, ['views']);
-
-    gulp.watch(paths.image, ['images']);
-
-    gulp.watch(paths.font, ['fonts']);
-
-    gulp.watch(paths.template, ['templates']);
-
+    gulp.watch(srcPaths.sass, ['compass']);
+    gulp.watch(srcPaths.js, ['js']);
+    gulp.watch(srcPaths.view, ['views']);
+    gulp.watch(srcPaths.image, ['images']);
+    gulp.watch(srcPaths.font, ['fonts']);
+    gulp.watch(srcPaths.template, ['templates']);
     gutil.log('Start up successful!');
 });
-
 
 // Default Task
 gulp.task('default', ['serve']);

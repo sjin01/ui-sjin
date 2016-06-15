@@ -1,0 +1,45 @@
+@charset "UTF-8";
+// 常用间距
+@each $amount, $size in (
+                (10 10px) (15 15px) (20 20px) (25 25px) (30 30px) (35 35px) (40 40px) (45 45px) (50 50px) (55 55px) (60 60px) (65 65px) (70 70px) (75 75px) (80 80px) (85 85px) (90 90px) (95 95px) (100 100px)
+) {
+  .mg-#{$amount} {
+    margin: $size !important;
+  }
+  .mt-#{$amount} {
+    margin-top: $size !important;
+  }
+  .mb-#{$amount} {
+    margin-bottom: $size !important;
+  }
+  .mr-#{$amount} {
+    margin-right: $size !important;
+  }
+  .ml-#{$amount} {
+    margin-left: $size !important;
+  }
+  .pd-#{$amount} {
+    padding: $size !important;
+  }
+  .pt-#{$amount} {
+    padding-top: $size !important;
+  }
+  .pl-#{$amount} {
+    padding-left: $size !important;
+  }
+  .pr-#{$amount} {
+    padding-right: $size !important;
+  }
+  .pb-#{$amount} {
+    padding-bottom: $size !important;
+  }
+}
+// 常用字号
+@each $amount, $size in ((12 12px) (14 14px) (16 16px) (18 18px) (20 20px) (24 24px)) {
+  .font-#{$amount} {
+    font-size: $size !important;
+  }
+}
+.font-bold{
+  font-weight: bold!important;
+}
