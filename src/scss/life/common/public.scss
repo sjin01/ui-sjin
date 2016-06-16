@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@import "../variables";
+
+body {
+  font-size: $ui-font-size;
+  font-family: "PingFang SC","Helvetica Neue", Helvetica, "Microsoft Yahei", Arial, sans-serif;
+}
+
 // 常用间距
 @each $amount, $size in (
                 (10 10px) (15 15px) (20 20px) (25 25px) (30 30px) (35 35px) (40 40px) (45 45px) (50 50px) (55 55px) (60 60px) (65 65px) (70 70px) (75 75px) (80 80px) (85 85px) (90 90px) (95 95px) (100 100px)
@@ -42,4 +49,61 @@
 }
 .font-bold{
   font-weight: bold!important;
+}
+
+// 对齐
+@each $amount in ((left),(center),(right)){
+  .text-align-#{$amount} {
+    text-align: #{$amount}!important;
+  }
+}
+@each $amount in ((top),(middle),(bottom)){
+  .vertical-align-#{$amount} {
+    vertical-align: #{$amount}!important;
+  }
+}
+
+// no padding/border/margin
+@each $amount,$v in (('-t' '-top'),('-r' '-right'),('-b' '-bottom'),('-l' '-left'),('' '')){
+  .no-padding#{$amount} {
+    padding#{$v}: 0!important;
+  }
+  .no-border#{$amount}{
+    border#{$v}: 0!important;
+  }
+  .no-margin#{$amount}{
+    margin#{$v}: 0!important;
+  }
+}
+
+// 浮动起来
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+
+// 清除 浮动
+.clearfix {
+  zoom: 1;
+  &:before , &:after{
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+.sjin-required{
+  &:before{
+    content: '* ';
+    color: red;
+    vertical-align: middle;
+  }
 }

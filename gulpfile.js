@@ -100,7 +100,7 @@ gulp.task('views', function() {
             return result;
         }))
         .pipe(jade({
-            pretty: true
+            pretty: '\t'  // 使生成出来的文件 缩进一个制表符
         }).on('error', function(e) {
             gutil.log(e);
             this.emit('end');
