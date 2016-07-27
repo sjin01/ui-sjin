@@ -1,6 +1,8 @@
+@charset "UTF-8";
 @import "variables";
 @import "compass";
-@mixin sec-button($color,$hover-color,$background-color,$hover-background-color,$border-color,$width:null,$height:2.5em){
+// 公共按钮
+@mixin sjin-life-button($color,$hover-color,$background-color,$hover-background-color,$border-color,$width:null,$height:2.5em){
   color: $color;
   line-height: $height;
   height: $height;
@@ -37,7 +39,7 @@
   }
 }
 
-@mixin sec-input($height:null){
+@mixin sjin-life-input($height:null){
   @if($height){
     height: $height;
     line-height: $height;
@@ -51,7 +53,8 @@
   @include box-sizing(border-box);
   outline: none;
 }
-@mixin sec-select{
+
+@mixin sjin-life-select{
   height:$sec-input-height;
   line-height: $sec-input-line-height;
   border:1px solid $sec-gray-border-color;
@@ -61,13 +64,15 @@
   @include box-sizing(border-box);
   outline:none;
 }
-@mixin sec-textarea{
+
+@mixin sjin-life-textarea{
   border: 1px solid $sec-gray-border-color;
   padding-left:$sec-input-padding;
   @include border-radius($sec-input-border-radius);
   @include box-sizing(border-box);
   outline: none;
 }
-@mixin sec-border{
+
+@mixin sjin-life-border{
   border:1px solid $sec-gray-border-color;
 }

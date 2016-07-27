@@ -2,7 +2,7 @@
  * Created by kai.zuo on 2016/3/23.
  * 首页搜索面板组件
  */
-define(['jquery', 'pagination','text!../../template/components.rac','ractive','ui','is'],function($, Pagination,template,Ractive,UI,is){
+define(['jquery', 'pagination','text!../template/components.rac','ractive','ui','is'],function($, Pagination,template,Ractive,UI,is){
     UI.Panel = UI.extend(UI,function(options){
         //jquery选择器或者jquery对象【输入框】
         this.target = options.target;

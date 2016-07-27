@@ -1,54 +1,54 @@
 
 <!-- Created by shijing.guan on 2016/6/7.--><!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--meta(http-equiv="X-UA-Compatible", content="IE=edge")-->
-    <!--meta(name="renderer", content="webkit")-->
-    <!--meta(name="viewport", content="width=device-width, user-scalable=no")-->
-    <title>UI-sJin-Life</title>
-    <link href="../../css/life/common/reset.css" rel="stylesheet" type="text/css">
-    <link href="../../css/life/common/public.css" rel="stylesheet" type="text/css">
-    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../../css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="../../css/life/icon/icon.css" rel="stylesheet" type="text/css">
-    <script src="../../js/lib/require.js"></script>
-    <script src="../../js/base.js"></script>
-  </head>
-  <body>
-    <!-- 测试jade-->
-    <div class="jumbotron">
-      <h1>this is UI-sJin index page ...</h1>
-    </div>
-    <!-- 测试雪碧图 正常显示--><i class="icon-life icon-life-record"></i>
-    <!-- 测试 bootstrap css-->
-    <div class="row">
-      <div class="col-xs-12">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>bootstrap-sass-3.3.5</th>
-              <th>Font-Awesome-3.2.1</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="http://v3.bootcss.com/components/" target="_blank" class="font-14">http://v3.bootcss.com/components/</a></td>
-              <td><a href="http://www.bootcss.com/p/font-awesome/" target="_blank" class="font-bold">http://www.bootcss.com/p/font-awesome/</a></td>
-            </tr>
-            <tr>
-              <td><i class="glyphicon glyphicon-heart"></i></td>
-              <td><i class="icon icon-stethoscope"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- 测试 js正常引用-->
-    <script type="text/javascript">
-      require(['jquery', 'popup'], function ($, Popup) {
-          $('h1').html('this is UI-sJin index page ... test js');
-      });
-    </script>
-  </body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--meta(http-equiv="X-UA-Compatible", content="IE=edge")-->
+		<!--meta(name="renderer", content="webkit")-->
+		<!--meta(name="viewport", content="width=device-width, user-scalable=no")-->
+		<title>UI-sJin-Life</title>
+		<link href="../../css/life/common/reset.css" rel="stylesheet" type="text/css">
+		<link href="../../css/life/common/public.css" rel="stylesheet" type="text/css">
+		<link href="../../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="../../css/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+		<link href="../../css/life/icon/icon.css" rel="stylesheet" type="text/css">
+		<script src="../../js/lib/require.js"></script>
+		<script src="../../js/base.js"></script>
+	</head>
+	<body>
+		<!-- 测试jade-->
+		<div class="jumbotron">
+			<h1>this is UI-sJin index page ...</h1>
+		</div>
+		<!-- 测试雪碧图 正常显示--><i class="icon-life icon-life-record"></i>
+		<!-- 测试 bootstrap css-->
+		<div class="row">
+			<div class="col-xs-12">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="text-center">bootstrap-sass-3.3.5</th>
+							<th>Font-Awesome-3.2.1</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="http://v3.bootcss.com/components/" target="_blank" class="font-14 sjin-required">http://v3.bootcss.com/components/</a></td>
+							<td><a href="http://www.bootcss.com/p/font-awesome/" target="_blank" class="font-bold sjin-required">http://www.bootcss.com/p/font-awesome/</a></td>
+						</tr>
+						<tr>
+							<td><i class="glyphicon glyphicon-heart"></i></td>
+							<td><i class="icon icon-stethoscope"></i></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 测试 js正常引用-->
+		<script type="text/javascript">
+			require(['jquery', 'popup'], function ($, Popup) {
+			    $('h1').html('this is UI-sJin index page ... test js');
+			});
+		</script>
+	</body>
 </html>

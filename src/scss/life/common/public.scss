@@ -3,7 +3,7 @@
 
 body {
   font-size: $ui-font-size;
-  font-family: "PingFang SC","Helvetica Neue", Helvetica, "Microsoft Yahei", Arial, sans-serif;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft Yahei", Arial, sans-serif;
 }
 
 // 常用间距
@@ -100,7 +100,7 @@ body {
   }
 }
 
-.sjin-required{
+.sjin-life-required{
   &:before{
     content: '* ';
     color: red;

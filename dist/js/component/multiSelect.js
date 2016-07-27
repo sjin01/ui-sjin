@@ -1,4 +1,4 @@
-define(['jquery','text!../../template/components.rac','ractive','ui',"css!../css/component/multiSelect.css",'window'],function($,template,Ractive,UI,UIWindow){
+define(['jquery','text!../template/components.rac','ractive','ui',"css!../css/component/multiSelect.css",'window'],function($,template,Ractive,UI,UIWindow){
     UI.MultiSelect = UI.extend(UI,function(options){
         /**
          * jquery选择器或者jquery对象【输入框】

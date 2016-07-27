@@ -32,12 +32,12 @@ $sec-font-color: #313131 !default;
 //浅黑色文字:网站中特别重要文字
 $sec-light-dark-color: #1b1b1b !default;
 //灰色文本字体：顶部文字内容及详情文字
-$sec-gray-font-color: #535353 !default;
+$sec-gray-font-color:                                               #535353 !default;
 //浅灰色文本字体：详情辅助文字及底部详情文字及辅助说明文字
 $sec-light-gray-color: #898989 !default;
 
 //灰色边框线
-$sec-gray-border-color: darken(white,20%) !default;
+$sec-gray-border-color:                                             #d7d7d7 !default;
 // 浅灰色边框线
 $sec-gray-border-color-light: #dbdbdb !default;
 //警告色边框
@@ -48,7 +48,7 @@ $sec-gray-bg-color: #d8d8d8 !default;
 //深灰色背景
 $sec-dark-bg-color: #c2c3c4 !default;
 //浅灰色背景
-$sec-light-bg-color:#f5f5f5 !default;
+$sec-light-bg-color:                                                #f5f5f5 !default;
 //浅黄色背景
 $sec-light-yellow-bg:#fffded !default;
 //警告色背景
@@ -87,17 +87,12 @@ $pagination-positive-color:$sec-base-color;
 $pagination-border-color:$sec-gray-border-color;
 $pagination-border-radius:0;
 
-$sec-normal-button-width:110px;
-
-$sec-line-height: 30px !default;
-
-$sec-input-height:$sec-line-height !default;
-
-$sec-input-line-height:$sec-input-height !default;;
-
-$sec-input-border-radius: 0 !default;
-
-$sec-input-padding: 5px !default;
+$sec-normal-button-width:                                             110px;
+$sec-line-height:                                                     30px !default;
+$sec-input-height:                                                    $sec-line-height !default;
+$sec-input-line-height:                                               $sec-input-height !default;;
+$sec-input-border-radius:                                             0 !default;
+$sec-input-padding:                                                   5px !default;
 
 $ui-page-width:1200px;
 $ui-page-padding:0 ;

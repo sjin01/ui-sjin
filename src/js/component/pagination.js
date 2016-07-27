@@ -1,4 +1,4 @@
-define(["jquery","ractive","text!../../template/components.rac",'ui','ractive-slide',"jquery-pagination","css!../css/component/pagination.css"],function($,Ractive,template,UI,Slide){
+define(["jquery","ractive","text!../template/components.rac",'ui','ractive-slide',"jquery-pagination","css!../css/component/pagination.css"],function($,Ractive,template,UI,Slide){
 
     var sortDecorator = function (node,sortKey) {
         var me = this;
