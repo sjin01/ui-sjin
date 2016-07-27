@@ -23,8 +23,8 @@ asset_cache_buster do |_, file|
     end
 end
 
-#add platform base sass files
-#add_import_path "../ui-base/scss"
+# add platform base sass files
+# add_import_path "../ui-base/scss"
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

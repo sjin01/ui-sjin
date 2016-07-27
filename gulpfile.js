@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     compass = require('gulp-compass'),
     uglify = require('gulp-uglify'),
+    //minifycss = require('gulp-minify-css'),
     jade = require('gulp-jade'),
     data = require('gulp-data'),
     concat = require('gulp-concat'),
@@ -21,7 +22,7 @@ var gulp = require('gulp'),
     font: ['src/fonts/!**!/!*.{eot,svg,ttf,woff,woff2}']
 };*/
 var srcPaths = {
-        sass: ['src/scss/**/*.scss'],
+        sass: ['src/scss/**/*.scss', 'src/scss/**/**/*.scss'],
         js:   ['src/js/**/*.js'],
         view: ['src/views/**/*.jade', '!src/views/**/*-layout.jade'],
         json: ['src/views/**/*.json'],
@@ -44,6 +45,7 @@ var backstage = require(jsonRoot + 'backstage.json'),
     operation = require(jsonRoot + 'operation.json'),
     distributor = require(jsonRoot + 'dist.json'),
     supply = require(jsonRoot + 'supply.json');*/
+
 // --- Basic Tasks ---
 gulp.task('compass', ['images'], function() {
     return gulp.src(srcPaths.sass)
@@ -57,6 +59,7 @@ gulp.task('compass', ['images'], function() {
                 this.emit('end');
             }))
         .pipe(gulp.dest(distPaths.css))
+        //.pipe(minifycss())   //执行压缩
         .pipe(browserSync.stream({
             once: true
         }));
