@@ -36,7 +36,6 @@ requirejs.config({
         'placeholder':'component/placeholder',
         'slidesjs': 'lib/jquery/slides/jquery.slides',
         'is':'component/is',
-        'panel':'component/panel',
         'pairdate':'component/pairdate',
         'grant':'component/grant',
         'htmleditor':'component/htmleditor',
@@ -44,7 +43,8 @@ requirejs.config({
         'iCheck':'component/iCheck',
         'iSelect':'component/iSelect',
         'tooltip':'component/tooltip',
-        'panel':'component/panel'
+        'panel':'component/panel',
+        'choice-ganged':'/js/component/choice-ganged'
 	},
     map: {
         '*': {

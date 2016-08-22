@@ -13,7 +13,7 @@
     font-family: 'Glyphicons Halflings';
     src: url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.eot'), '../../fonts/bootstrap/glyphicons-halflings-regular.eot'));
     src: url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix'), '../../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix')) format('embedded-opentype'),
-         url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.woff2'), '../../fonts/bootstrap/glyphicons-halflings-regular.woff2')) format('woff2'),
+         /*url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.woff2'), '../../fonts/bootstrap/glyphicons-halflings-regular.woff2')) format('woff2'),*/
          url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.woff'), '../../fonts/bootstrap/glyphicons-halflings-regular.woff')) format('woff'),
          url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.ttf'), '../../fonts/bootstrap/glyphicons-halflings-regular.ttf')) format('truetype'),
          url(if($bootstrap-sass-asset-helper, twbs-font-path('../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicon'), '../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicon')) format('svg');
