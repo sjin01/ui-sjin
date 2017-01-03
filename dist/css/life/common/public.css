@@ -766,6 +766,46 @@ body {
   padding-bottom: 100px !important;
 }
 
+.mg-320 {
+  margin: 320px !important;
+}
+
+.mt-320 {
+  margin-top: 320px !important;
+}
+
+.mb-320 {
+  margin-bottom: 320px !important;
+}
+
+.mr-320 {
+  margin-right: 320px !important;
+}
+
+.ml-320 {
+  margin-left: 320px !important;
+}
+
+.pd-320 {
+  padding: 320px !important;
+}
+
+.pt-320 {
+  padding-top: 320px !important;
+}
+
+.pl-320 {
+  padding-left: 320px !important;
+}
+
+.pr-320 {
+  padding-right: 320px !important;
+}
+
+.pb-320 {
+  padding-bottom: 320px !important;
+}
+
 .font-12 {
   font-size: 12px !important;
 }

@@ -3,6 +3,7 @@
  */
 requirejs.config({
 	urlArgs:"v=1.0.0",
+  baseUrl: "/js",
 	paths: {
 	    'jquery': 'lib/jquery/jquery-1.11.1',
 	    'ractive': 'lib/ractive/ractive-legacy',
